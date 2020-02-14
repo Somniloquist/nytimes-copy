@@ -12,6 +12,7 @@ nav {
   padding: 4px 15px 2px;
   max-width: 1605px;
   border-bottom: 1px solid #e2e2e2;
+  margin-auto;
 }
 #nav-logo {
   height: 26px;
@@ -195,4 +196,83 @@ article h1 {
   border: 1px solid #333;
   border-radius: 5px;
 
+}
+
+.main-content {
+  grid-column-start: 2;
+}
+
+
+
+.caption-top {
+  grid-column: 1 / -1;
+  margin-bottom: 10px;
+}
+.caption-top h2 {
+  margin: 0 0 2px 0;
+  font-size: 1.25rem;
+}
+.caption-top p {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  color: #666;
+  margin: 0;
+}
+
+.image-grid-container {
+  position: relative;
+  grid-column: 1 / -1;
+  min-width: 720px;
+}
+
+.image-grid-container img {
+  /* Have the image span the entire width of the grid */
+  width: 100%;  
+}
+.image-grid-container .credit {
+  color: #000;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-family: nyt-franklin,arial,helvetica,sans-serif;
+}
+.image-grid-container .credit:before {
+  height: 1px;
+  width: 60px;
+  content: "";
+  background: #000;
+  display: block;
+  margin: 0 0 13px;
+}
+
+/* User nested grid and relative/absolute positioning to add info to each section of the image */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  grid-gap: 6px;
+  grid-template-rows: 1fr 1fr;
+}
+.image-grid p {
+  position: relative;
+  top: 50%;
+  height: 50%;
+  font-size: .65rem;
+  line-height: 1rem;
+  line-height: 0.9rem;
+  font-family: sans-nyt-franklin,arial,helvetica,sans-serif;
+  margin: 0;
+}
+
+
+/* can't figure out why the NYT page has more vertical space for content in their image (I'm using the same image?)
+    so I reduce the font size and line height to prevent the text from overflowing */
+@media only screen and (min-width: 864px) {
+  .image-grid p {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
 }
