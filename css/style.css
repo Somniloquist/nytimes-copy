@@ -199,6 +199,8 @@ article h1 {
 
 .main-content {
   grid-column-start: 2;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
 }
 .main-content img {
   width: 100%;
@@ -279,5 +281,37 @@ article h1 {
   .image-grid p {
     font-size: 0.75rem;
     line-height: 1rem;
+
   }
+}
+
+.coa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.25rem;
+  font-family: sans-nyt-franklin,arial,helvetica,sans-serif;
+}
+.coa a {
+  display: block;
+  text-decoration: none;
+  color: rgb(50, 104, 145);
+}
+.coa:before {
+  content: "";
+  height: 1px;
+  width: 60px;
+  background: #ccc;
+  display: block;
+  margin-bottom: 18px;
+}
+.coa:after {
+  content: "";
+  height: 1px;
+  width: 60px;
+  background: #ccc;
+  display: block;
+  margin-top: 18px;
 }
